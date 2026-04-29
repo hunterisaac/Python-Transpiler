@@ -1,7 +1,7 @@
-#trying to figure out what code my transpiler should create! :)
+#trying to figure out what python code my transpiler should create! :)
 import os
-from typing import Literal
-from pydantic import BaseModel, ConfigDict, ValidationError
+from typing import Literal, Union
+from pydantic import BaseModel, ConfigDict, ValidationError, Field
 from litellm import completion
 import os
 import json 
@@ -15,9 +15,15 @@ response = completion(
 )
 response = response.choices[0].message.content
 data = json.loads(response[7:-3].strip())
-class LLMResponse(BaseModel): #validating llm output ... how do i run it through lol
-    state: Literal['tool', 'final']
+class ToolResponse(BaseModel):
+   state: Literal['tool']
+class FinalResponse(BaseModel):
+   state: Literal['final']
+class LLMResponse(BaseModel):
+    response_type: Union[ToolResponse, FinalResponse] = Field(discriminator='state')
+
 try:
-  LLMResponse.model_validate(data)  
+  LLMResponse(response_type=data)
+  print(LLMResponse(response_type=data))
 except ValidationError as e:
   print(e)

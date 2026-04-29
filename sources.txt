@@ -5,3 +5,4 @@ https://www.w3schools.com/python/gloss_python_string_slice.asp
 https://pydantic.dev/docs/validation/latest/concepts/fields/
 https://stackoverflow.com/questions/61238502/how-to-require-predefined-string-values-in-python-pydantic-basemodels
 https://pydantic.dev/docs/validation/latest/concepts/json/
+https://pydantic.dev/docs/validation/latest/concepts/unions/
