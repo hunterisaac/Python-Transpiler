@@ -1,3 +1,4 @@
 https://docs.litellm.ai/docs/pass_through/mistral
 https://docs.mistral.ai/
 https://docs.litellm.ai/docs/providers/mistral
+https://www.w3schools.com/python/gloss_python_string_slice.asp

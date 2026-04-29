@@ -11,4 +11,6 @@ response = completion(
   model="mistral/mistral-tiny",
   messages=[{"role": "user", "content": f"System Prompt: {system_prompt} Prompt: {user_prompt}"}]
 )
-print(response.choices[0].message.content)
+response = response.choices[0].message.content
+
+print(response[7:-3].strip())
