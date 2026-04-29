@@ -14,14 +14,21 @@ response = completion(
   messages=[{"role": "user", "content": f"System Prompt: {system_prompt} Prompt: {user_prompt}"}]
 )
 response = response.choices[0].message.content
-data = json.loads(response[7:-3].strip())
+
+amount_chars = len(response)
+start_index = response.index("{")
+end_index = response.rfind("}", start_index, amount_chars)
+data = json.loads(response[start_index:end_index+1])
+
 class ToolResponse(BaseModel):
    state: Literal['tool']
+   tool_name: str
+   tool_args: dict
 class FinalResponse(BaseModel):
    state: Literal['final']
+   final_answer: str
 class LLMResponse(BaseModel):
     response_type: Union[ToolResponse, FinalResponse] = Field(discriminator='state')
-
 try:
   LLMResponse(response_type=data)
   print(LLMResponse(response_type=data))
