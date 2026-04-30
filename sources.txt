@@ -7,3 +7,5 @@ https://stackoverflow.com/questions/61238502/how-to-require-predefined-string-va
 https://pydantic.dev/docs/validation/latest/concepts/json/
 https://pydantic.dev/docs/validation/latest/concepts/unions/
 https://www.geeksforgeeks.org/python/python-string-index-method/
+https://stackoverflow.com/questions/71183960/short-way-to-get-all-field-names-of-a-pydantic-class
+https://pydantic.dev/docs/validation/latest/concepts/fields/
