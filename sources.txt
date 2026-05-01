@@ -9,3 +9,8 @@ https://pydantic.dev/docs/validation/latest/concepts/unions/
 https://www.geeksforgeeks.org/python/python-string-index-method/
 https://stackoverflow.com/questions/71183960/short-way-to-get-all-field-names-of-a-pydantic-class
 https://pydantic.dev/docs/validation/latest/concepts/fields/
+https://www.w3schools.com/python/python_dictionaries_add.asp
+https://www.w3schools.com/python/python_dictionaries_loop.asp
+https://www.reddit.com/r/learnpython/comments/vm12fm/can_someone_explain_to_me_how_to_add_up_all_the/
+https://www.geeksforgeeks.org/python/decorators-in-python/
+https://stackoverflow.com/questions/9168340/using-a-dictionary-to-select-function-to-execute
