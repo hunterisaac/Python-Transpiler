@@ -14,3 +14,4 @@ https://www.w3schools.com/python/python_dictionaries_loop.asp
 https://www.reddit.com/r/learnpython/comments/vm12fm/can_someone_explain_to_me_how_to_add_up_all_the/
 https://www.geeksforgeeks.org/python/decorators-in-python/
 https://stackoverflow.com/questions/9168340/using-a-dictionary-to-select-function-to-execute
+https://stackoverflow.com/questions/3545331/how-can-i-get-dictionary-key-as-variable-directly-in-python-not-by-searching-fr
