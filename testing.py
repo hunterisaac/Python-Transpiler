@@ -1,5 +1,14 @@
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-mydictionary = [{'add': {'description': 'Tool to add all # in a dict', 'function': 'addddd', 'subtract': {'description': 'Tool to subtract all # in a dict', 'function': 'subss'}}}]
-for key in mydictionary:
-   for dict in key:
-     print(dict['description'])
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size=500,
+    chunk_overlap=50,
+    separators=["\n\n", "\n", ". ", " "]
+)
+import os
+arr = os.listdir('rag_docs')
+for i in arr:
+    f = open(f"rag_docs/{i}")
+    chunks = splitter.split_text(f.read())
+    print(chunks)
+#chunks = splitter.split_text(document)

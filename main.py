@@ -1,4 +1,4 @@
-#trying to figure out what python code my transpiler should create! :)
+#Creating the code my transpiler will need to generate
 import os
 from typing import Literal, Union
 from pydantic import BaseModel, ConfigDict, ValidationError, Field
@@ -28,9 +28,6 @@ def subtract(numbers):
       total -= numbers[x]
    return total
 
-      
-#Executing Tool Calls
-#Registering tool calls
 class ToolResponse(BaseModel):
     state: Literal['tool']
     tool_name: str
@@ -82,6 +79,7 @@ while True:
         
         
     except ValidationError as e:
+      e = f"{e}"
       message_history.append({"role": "system", "content": e})
   except Exception as e:
      message_history.append({"role": "system", "content": "Invalid JSON"})
